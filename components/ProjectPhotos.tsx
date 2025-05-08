@@ -7,7 +7,7 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-const IMAGES = [
+const safepiccImages = [
   "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0tQialXoZrNUznxueLQG8qkDhHBYdA9bCmy07",
   "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY09RDmNh5pWBA8Hd72aLjfvEMJQwFyxnkmSZ5X",
   "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY04ilHBfERbUn2FgZkY9o1cMPGNeLw7aAKCuy6",
@@ -19,9 +19,9 @@ const eagleCollectionsImages = [
   "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0G9fAGZndCTMNJ426KPRzEojYVD5euiLmy8kA",
   "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0C8pgcms30K21wP9UgROQjbLzcoDIZulXy3Js",
   "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0yCMGG5IRukHgqo0m7NrFMBWYLT64pfivQVPz",
-  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0wWL32HTyb1ujDW94mv36tqiI28cSsXZAklpU",
-  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0xKx4me6qPV6dLi0lspvXe4FbQHARoOWf7TBY",
-  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0mC9GaTh2f1ZlxRKdi8k47GLEbNItWAn6o0zC",
+  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0zrBlOXebyGvYHI4OU3LnD1jkCo8STdchVzRJ",
+  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY05c9mUys40ZjChpKGrUt3aEHvJkSxNQ7AlVwe",
+  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0sro1UiQpEvV7IPnAB1rZoJgs8iNFhDY0MbXG",
 ];
 const healthcareImpactImages = [
   "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY02qdCP0a16MUxFai4AfdCIjsZ2w7KEPT1ecBz",
@@ -29,18 +29,17 @@ const healthcareImpactImages = [
   "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY01udZhzPHEdbyoGjfarDNxlgWCm79ZJFPz3H0",
 ];
 const ekpMeetingImages = [
-  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0tQialXoZrNUznxueLQG8qkDhHBYdA9bCmy07",
-  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY09RDmNh5pWBA8Hd72aLjfvEMJQwFyxnkmSZ5X",
-  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY04ilHBfERbUn2FgZkY9o1cMPGNeLw7aAKCuy6",
-  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0RcF0WCrjYI7Nqg6twUTMHx8fkcb0emWZsJo1",
-  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0CLwIgl30K21wP9UgROQjbLzcoDIZulXy3Jsp",
+  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY03QCRZTluKPg5m3rJpE4OdzBC6IXl8hw1VSMb",
+  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0nlxIATDUG0ezDourLaVYixHA2d6BbXqstQZS",
+  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0IYvr6nR4HdkJySnl2AV03EgKNXGcCBor61b9",
+  "https://uiv5vypd8g.ufs.sh/f/6sgNUfw75oY0IdpOtrR4HdkJySnl2AV03EgKNXGcCBor61b9",
 ];
 
 const HeroDemo1 = () => {
   return (
     <ContainerScroll className="h-[350vh]">
       <BentoGrid className="sticky top-0  h-screen w-full p-4">
-        {IMAGES.map((imageUrl, index) => (
+        {safepiccImages.map((imageUrl, index) => (
           <BentoCell
             key={index}
             className="overflow-hidden rounded-xl shadow-xl"
@@ -54,7 +53,7 @@ const HeroDemo1 = () => {
         ))}
       </BentoGrid>
 
-      <ContainerScale className=" z-10 text-center flex flex-col justify-center items-center">
+      <ContainerScale className=" z-10 text-center flex flex-col justify-center items-center bg-white/60 backdrop-blur-md rounded-xl p-6">
         <h1 className="max-w-xl text-5xl font-bold tracking-tighter text-slate-800 ">
           Safe Picc Inc.
         </h1>
@@ -63,8 +62,8 @@ const HeroDemo1 = () => {
           professional training courses aimed at enhancing knowledge and skills
           in the healthcare field.
         </p>
-        <Link href="https://www.safepicc.com">
-          <Button className="bg-black px-4 py-2 font-medium hover:bg-black/70">
+        <Link href="https://www.safepicc.com" target="_blank">
+          <Button className="bg-black px-4 py-2 font-medium hover:bg-black/70 cursor-pointer">
             View Project
           </Button>
         </Link>
@@ -80,7 +79,7 @@ const HeroDemo2 = () => {
         variant={"fourCells"}
         className="sticky left-0 top-0 h-svh w-full p-4"
       >
-        {eagleCollectionsImages
+        {ekpMeetingImages
           .filter((_, index) => index <= 3)
           .map((imageUrl, index) => (
             <BentoCell
@@ -96,16 +95,17 @@ const HeroDemo2 = () => {
             </BentoCell>
           ))}
       </BentoGrid>
-      <ContainerScale className="text-center flex flex-col justify-center items-center">
+      <ContainerScale className="text-center flex flex-col justify-center items-center bg-white/60 backdrop-blur-md rounded-xl p-6">
         <h1 className="max-w-xl text-5xl font-bold tracking-tighter">
-          Eagle Collection Store
+          Ekpoma Association Houston
         </h1>
         <p className="my-6 max-w-2xl text-sm text-stone-500 md:text-base">
-          A fashion e-commerce website that offers a wide variety of clothing,
-          accessories, and lifestyle products for diverse customer preferences.
+          A non-profit organization dedicated to promoting community development
+          initiatives and providing a platform for individuals and organizations
+          to contribute through donations.
         </p>
-        <Link href="https://www.eaglecollectionstore.com">
-          <Button className="bg-black px-4 py-2 font-medium   hover:bg-black/70">
+        <Link href="https://www.ekpomaassociation.org" target="_blank">
+          <Button className="bg-black px-4 py-2 font-medium   hover:bg-black/70 cursor-pointer">
             View Project
           </Button>
         </Link>
@@ -137,7 +137,7 @@ const HeroDemo3 = () => {
             </BentoCell>
           ))}
       </BentoGrid>
-      <ContainerScale className="text-center flex flex-col justify-center items-center">
+      <ContainerScale className="text-center flex flex-col justify-center items-center bg-[#021526]/60 backdrop-blur-md rounded-xl p-6">
         <h1 className="max-w-xl text-5xl font-bold tracking-tighter ">
           Healthcare Impact
         </h1>
@@ -146,8 +146,8 @@ const HeroDemo3 = () => {
           information to the public, promoting wellness.
         </p>
 
-        <Link href="https://www.hcimpactmag.com">
-          <Button className="bg-white text-black px-4 py-2 font-medium   hover:bg-white/80">
+        <Link href="https://www.hcimpactmag.com" target="_blank">
+          <Button className="bg-white text-[#021526] px-4 py-2 font-medium   hover:bg-white/80 cursor-pointer">
             View Project
           </Button>
         </Link>
@@ -155,4 +155,44 @@ const HeroDemo3 = () => {
     </ContainerScroll>
   );
 };
-export { HeroDemo1, HeroDemo2, HeroDemo3 };
+
+const HeroDemo4 = () => {
+  return (
+    <ContainerScroll className="h-[350vh] bg-slate-900 text-slate-100">
+      <BentoGrid
+        variant={"sevenCells"}
+        className="sticky left-0 top-0 h-svh w-full p-4"
+      >
+        {eagleCollectionsImages
+          .filter((_, index) => index <= 6)
+          .map((imageUrl, index) => (
+            <BentoCell
+              key={index}
+              className="overflow-hidden rounded-xl shadow-xl"
+            >
+              <img
+                className="size-full object-cover object-center"
+                width="100%"
+                height="100%"
+                src={imageUrl}
+              />
+            </BentoCell>
+          ))}
+      </BentoGrid>
+      <ContainerScale className="text-center flex flex-col justify-center items-center bg-[#021526]/60 backdrop-blur-md rounded-xl p-6">
+        <h1 className="max-w-xl text-5xl font-bold tracking-tighter ">
+          Eagle Collection Store
+        </h1>
+        <p className="my-6 max-w-2xl text-sm opacity-80 md:text-base">
+          A fashion e-commerce website that offers a wide variety of clothing,
+          accessories, and lifestyle products for diverse customer preferences.
+        </p>
+
+        <Button className="bg-white text-[#021526] px-4 py-2 font-medium   hover:bg-white/80 cursor-pointer">
+          View Project
+        </Button>
+      </ContainerScale>
+    </ContainerScroll>
+  );
+};
+export { HeroDemo1, HeroDemo2, HeroDemo3, HeroDemo4 };

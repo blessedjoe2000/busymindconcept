@@ -35,6 +35,16 @@ const bentoGridVariants = cva(
         [&>*:nth-child(2)]:col-span-2
         [&>*:nth-child(3)]:col-span-2
       `,
+        sevenCells: `
+        grid-cols-6 grid-rows-[repeat(3,minmax(0,1fr))]
+        [&>*:nth-child(1)]:col-span-6 md:[&>*:nth-child(1)]:col-span-3 md:[&>*:nth-child(1)]:row-span-2
+        [&>*:nth-child(2)]:col-span-2 md:[&>*:nth-child(2)]:col-span-1 md:[&>*:nth-child(2)]:row-span-2
+        [&>*:nth-child(3)]:col-span-2 md:[&>*:nth-child(3)]:col-span-1 md:[&>*:nth-child(3)]:row-span-2
+        [&>*:nth-child(4)]:col-span-2 md:[&>*:nth-child(4)]:col-span-1 md:[&>*:nth-child(4)]:row-span-2
+        [&>*:nth-child(5)]:col-span-3 md:[&>*:nth-child(5)]:col-span-2
+        [&>*:nth-child(6)]:col-span-3 md:[&>*:nth-child(6)]:col-span-2
+        [&>*:nth-child(7)]:col-span-6 md:[&>*:nth-child(7)]:col-span-2
+`,
       },
     },
     defaultVariants: {
@@ -113,15 +123,17 @@ BentoCell.displayName = "BentoCell";
 const ContainerScale = React.forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
   ({ className, style, ...props }, ref) => {
     const { scrollYProgress } = useContainerScrollContext();
-    // const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-    // const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-    // const position = useTransform(scrollYProgress, (pos) =>
-    //   pos >= 0.6 ? "absolute" : "fixed"
-    // );
-
-    const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
-    const scale = useTransform(scrollYProgress, [0, 0.3], [0.8, 1]);
+    const opacity = useTransform(
+      scrollYProgress,
+      [0, 0.3, 0.7, 1],
+      [0, 1, 0, 0]
+    );
+    const scale = useTransform(
+      scrollYProgress,
+      [0, 0.3, 0.7, 1],
+      [0.8, 1, 0.8, 0.8]
+    );
     const position = useTransform(scrollYProgress, (pos) =>
       pos >= 0.95 ? "absolute" : "fixed"
     );
