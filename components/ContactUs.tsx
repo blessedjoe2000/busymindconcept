@@ -19,6 +19,7 @@ import axios from "axios";
 
 const ContactUs: React.FC = () => {
   const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
   const handleContactUs = async (e: FormEvent<HTMLFormElement>) => {
@@ -35,11 +36,13 @@ const ContactUs: React.FC = () => {
     try {
       const response = await axios.post("/api/send", {
         name,
+        email,
         message,
       });
 
       if (response.status === 200) {
         setName("");
+        setEmail("");
         setMessage("");
         toast.success(`Hi ${name}, message sent successfully`);
       }
@@ -56,7 +59,7 @@ const ContactUs: React.FC = () => {
           <Button>Contact Us</Button>
         </div>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[600px]">
+      <DialogContent className="w-full px-5">
         <form onSubmit={handleContactUs}>
           <DialogHeader>
             <DialogTitle>Contact Us</DialogTitle>
@@ -73,6 +76,19 @@ const ContactUs: React.FC = () => {
                 className="col-span-3"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+            <div className="grid grid-cols-4 items-center gap-4">
+              <Label htmlFor="email" className="text-right">
+                Email
+              </Label>
+              <Input
+                id="email"
+                placeholder="Enter your email."
+                className="col-span-3"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>

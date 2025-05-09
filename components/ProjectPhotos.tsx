@@ -53,8 +53,8 @@ const HeroDemo1 = () => {
         ))}
       </BentoGrid>
 
-      <ContainerScale className=" z-10 text-center flex flex-col justify-center items-center bg-white/60 backdrop-blur-md rounded-xl p-6">
-        <h1 className="max-w-xl text-5xl font-bold tracking-tighter text-slate-800 ">
+      <ContainerScale className=" z-10 sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-white/60 backdrop-blur-md rounded-xl p-6">
+        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter text-slate-800 ">
           Safe Picc Inc.
         </h1>
         <p className="my-6 max-w-2xl text-sm text-slate-700 md:text-base">
@@ -95,8 +95,8 @@ const HeroDemo2 = () => {
             </BentoCell>
           ))}
       </BentoGrid>
-      <ContainerScale className="text-center flex flex-col justify-center items-center bg-white/60 backdrop-blur-md rounded-xl p-6">
-        <h1 className="max-w-xl text-5xl font-bold tracking-tighter">
+      <ContainerScale className=" sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-white/60 backdrop-blur-md rounded-xl p-6">
+        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter">
           Ekpoma Association Houston
         </h1>
         <p className="my-6 max-w-2xl text-sm text-stone-500 md:text-base">
@@ -137,8 +137,8 @@ const HeroDemo3 = () => {
             </BentoCell>
           ))}
       </BentoGrid>
-      <ContainerScale className="text-center flex flex-col justify-center items-center bg-[#021526]/60 backdrop-blur-md rounded-xl p-6">
-        <h1 className="max-w-xl text-5xl font-bold tracking-tighter ">
+      <ContainerScale className="sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-[#021526]/60 backdrop-blur-md rounded-xl p-6">
+        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter ">
           Healthcare Impact
         </h1>
         <p className="my-6 max-w-2xl text-sm opacity-80 md:text-base">
@@ -179,18 +179,19 @@ const HeroDemo4 = () => {
             </BentoCell>
           ))}
       </BentoGrid>
-      <ContainerScale className="text-center flex flex-col justify-center items-center bg-[#021526]/60 backdrop-blur-md rounded-xl p-6">
-        <h1 className="max-w-xl text-5xl font-bold tracking-tighter ">
+      <ContainerScale className="sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-[#021526]/60 backdrop-blur-md rounded-xl p-6">
+        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter ">
           Eagle Collection Store
         </h1>
         <p className="my-6 max-w-2xl text-sm opacity-80 md:text-base">
           A fashion e-commerce website that offers a wide variety of clothing,
           accessories, and lifestyle products for diverse customer preferences.
         </p>
-
-        <Button className="bg-white text-[#021526] px-4 py-2 font-medium   hover:bg-white/80 cursor-pointer">
-          View Project
-        </Button>
+        <Link href="https://www.eaglecollectionstore.com" target="_blank">
+          <Button className="bg-white text-[#021526] px-4 py-2 font-medium   hover:bg-white/80 cursor-pointer">
+            View Project
+          </Button>
+        </Link>
       </ContainerScale>
     </ContainerScroll>
   );
