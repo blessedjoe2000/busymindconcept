@@ -53,7 +53,7 @@ const HeroDemo1 = () => {
         ))}
       </BentoGrid>
 
-      <ContainerScale className=" z-10 sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-white/60 backdrop-blur-md rounded-xl p-6">
+      <ContainerScale className="z-50 sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-white/60 backdrop-blur-md rounded-xl p-6">
         <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter text-slate-800 ">
           Safe Picc Inc.
         </h1>
@@ -73,90 +73,6 @@ const HeroDemo1 = () => {
 };
 
 const HeroDemo2 = () => {
-  return (
-    <ContainerScroll className="h-[350vh]">
-      <BentoGrid
-        variant={"fourCells"}
-        className="sticky left-0 top-0 h-svh w-full p-4"
-      >
-        {ekpMeetingImages
-          .filter((_, index) => index <= 3)
-          .map((imageUrl, index) => (
-            <BentoCell
-              key={index}
-              className="overflow-hidden rounded-xl shadow-xl"
-            >
-              <img
-                className="size-full object-cover object-center"
-                width="100%"
-                height="100%"
-                src={imageUrl}
-              />
-            </BentoCell>
-          ))}
-      </BentoGrid>
-      <ContainerScale className=" sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-white/60 backdrop-blur-md rounded-xl p-6">
-        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter">
-          Ekpoma Association Houston
-        </h1>
-        <p className="my-6 max-w-2xl text-sm text-stone-500 md:text-base">
-          A non-profit organization dedicated to promoting community development
-          initiatives and providing a platform for individuals and organizations
-          to contribute through donations.
-        </p>
-        <Link href="https://www.ekpomaassociation.org" target="_blank">
-          <Button className="bg-black px-4 py-2 font-medium   hover:bg-black/70 cursor-pointer">
-            View Project
-          </Button>
-        </Link>
-      </ContainerScale>
-    </ContainerScroll>
-  );
-};
-
-const HeroDemo3 = () => {
-  return (
-    <ContainerScroll className="h-[350vh] bg-slate-900 text-slate-100">
-      <BentoGrid
-        variant={"threeCells"}
-        className="sticky left-0 top-0 h-svh w-full p-4"
-      >
-        {healthcareImpactImages
-          .filter((_, index) => index <= 2)
-          .map((imageUrl, index) => (
-            <BentoCell
-              key={index}
-              className="overflow-hidden rounded-xl shadow-xl"
-            >
-              <img
-                className="size-full object-cover object-center"
-                width="100%"
-                height="100%"
-                src={imageUrl}
-              />
-            </BentoCell>
-          ))}
-      </BentoGrid>
-      <ContainerScale className="sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-[#021526]/60 backdrop-blur-md rounded-xl p-6">
-        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter ">
-          Healthcare Impact
-        </h1>
-        <p className="my-6 max-w-2xl text-sm opacity-80 md:text-base">
-          A healthcare blog website that delivers reliable and accessible health
-          information to the public, promoting wellness.
-        </p>
-
-        <Link href="https://www.hcimpactmag.com" target="_blank">
-          <Button className="bg-white text-[#021526] px-4 py-2 font-medium   hover:bg-white/80 cursor-pointer">
-            View Project
-          </Button>
-        </Link>
-      </ContainerScale>
-    </ContainerScroll>
-  );
-};
-
-const HeroDemo4 = () => {
   return (
     <ContainerScroll className="h-[350vh] bg-slate-900 text-slate-100">
       <BentoGrid
@@ -179,7 +95,7 @@ const HeroDemo4 = () => {
             </BentoCell>
           ))}
       </BentoGrid>
-      <ContainerScale className="sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-[#021526]/60 backdrop-blur-md rounded-xl p-6">
+      <ContainerScale className="z-40 sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-[#021526]/60 backdrop-blur-md rounded-xl p-6">
         <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter ">
           Eagle Collection Store
         </h1>
@@ -187,7 +103,11 @@ const HeroDemo4 = () => {
           A fashion e-commerce website that offers a wide variety of clothing,
           accessories, and lifestyle products for diverse customer preferences.
         </p>
-        <Link href="https://www.eaglecollectionstore.com" target="_blank">
+        <Link
+          href="https://www.eaglecollectionstore.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button className="bg-white text-[#021526] px-4 py-2 font-medium   hover:bg-white/80 cursor-pointer">
             View Project
           </Button>
@@ -196,4 +116,89 @@ const HeroDemo4 = () => {
     </ContainerScroll>
   );
 };
+
+const HeroDemo3 = () => {
+  return (
+    <ContainerScroll className="h-[350vh]">
+      <BentoGrid
+        variant={"fourCells"}
+        className="sticky left-0 top-0 h-svh w-full p-4"
+      >
+        {ekpMeetingImages
+          .filter((_, index) => index <= 3)
+          .map((imageUrl, index) => (
+            <BentoCell
+              key={index}
+              className="overflow-hidden rounded-xl shadow-xl"
+            >
+              <img
+                className="size-full object-cover object-center"
+                width="100%"
+                height="100%"
+                src={imageUrl}
+              />
+            </BentoCell>
+          ))}
+      </BentoGrid>
+      <ContainerScale className="z-30  sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-white/60 backdrop-blur-md rounded-xl p-6">
+        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter">
+          Ekpoma Association Houston
+        </h1>
+        <p className="my-6 max-w-2xl text-sm text-stone-500 md:text-base">
+          A non-profit organization dedicated to promoting community development
+          initiatives and providing a platform for individuals and organizations
+          to contribute through donations.
+        </p>
+        <Link href="https://www.ekpomaassociation.org" target="_blank">
+          <Button className="bg-black px-4 py-2 font-medium   hover:bg-black/70 cursor-pointer">
+            View Project
+          </Button>
+        </Link>
+      </ContainerScale>
+    </ContainerScroll>
+  );
+};
+
+const HeroDemo4 = () => {
+  return (
+    <ContainerScroll className="h-[350vh] bg-slate-900 text-slate-100">
+      <BentoGrid
+        variant={"threeCells"}
+        className="sticky left-0 top-0 h-svh w-full p-4"
+      >
+        {healthcareImpactImages
+          .filter((_, index) => index <= 2)
+          .map((imageUrl, index) => (
+            <BentoCell
+              key={index}
+              className="overflow-hidden rounded-xl shadow-xl"
+            >
+              <img
+                className="size-full object-cover object-center"
+                width="100%"
+                height="100%"
+                src={imageUrl}
+              />
+            </BentoCell>
+          ))}
+      </BentoGrid>
+      <ContainerScale className="z-10  sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-[#021526]/60 backdrop-blur-md rounded-xl p-6">
+        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter ">
+          Healthcare Impact
+        </h1>
+        <p className="my-6 max-w-2xl text-sm opacity-80 md:text-base">
+          A healthcare blog website that delivers reliable and accessible health
+          information to the public, promoting wellness.
+        </p>
+
+        <Link href="https://www.hcimpactmag.com" target="_blank">
+          <Button className="bg-white text-[#021526] px-4 py-2 font-medium   hover:bg-white/80 cursor-pointer">
+            View Project
+          </Button>
+        </Link>
+      </ContainerScale>
+    </ContainerScroll>
+  );
+};
+
 export { HeroDemo1, HeroDemo2, HeroDemo3, HeroDemo4 };

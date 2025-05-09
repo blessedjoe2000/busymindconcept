@@ -14,9 +14,9 @@ export default function Home() {
       <RobotHeader />
       <Projects />
       <HeroDemo1 />
-      <HeroDemo4 />
       <HeroDemo2 />
       <HeroDemo3 />
+      <HeroDemo4 />
       <ContactUs />
     </div>
   );
