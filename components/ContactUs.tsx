@@ -18,6 +18,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 
 const ContactUs: React.FC = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -44,6 +45,7 @@ const ContactUs: React.FC = () => {
         setName("");
         setEmail("");
         setMessage("");
+        setDialogOpen(false);
         toast.success(`Hi ${name}, message sent successfully`);
       }
     } catch (error) {
@@ -53,10 +55,10 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <Dialog>
+    <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
       <DialogTrigger asChild>
         <div className="my-10 flex justify-center">
-          <Button>Contact Us</Button>
+          <Button className="cursor-pointer">Contact Us</Button>
         </div>
       </DialogTrigger>
       <DialogContent className="w-full px-5">
@@ -74,6 +76,7 @@ const ContactUs: React.FC = () => {
                 id="name"
                 placeholder="Enter your name."
                 className="col-span-3"
+                type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -87,6 +90,7 @@ const ContactUs: React.FC = () => {
                 id="email"
                 placeholder="Enter your email."
                 className="col-span-3"
+                type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -107,7 +111,9 @@ const ContactUs: React.FC = () => {
             </div>
           </div>
           <DialogFooter>
-            <Button type="submit">Send</Button>
+            <Button type="submit" className="cursor-pointer">
+              Send
+            </Button>
           </DialogFooter>
         </form>
       </DialogContent>
