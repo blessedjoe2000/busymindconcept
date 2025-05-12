@@ -5,6 +5,7 @@ import {
   ContainerScroll,
 } from "@/components/blocks/hero-gallery-scroll-animation";
 import { Button } from "@/components/ui/button";
+import { SquareArrowOutUpRight } from "lucide-react";
 import Link from "next/link";
 
 const safepiccImages = [
@@ -63,8 +64,8 @@ const HeroDemo1 = () => {
           in the healthcare field.
         </p>
         <Link href="https://www.safepicc.com" target="_blank">
-          <Button className="bg-black px-4 py-2 font-medium hover:bg-black/70 cursor-pointer">
-            View Project
+          <Button className="bg-black px-4 py-2 font-medium hover:bg-black/70 cursor-pointer flex gap-2 items-center">
+            View Project <SquareArrowOutUpRight size={16} />
           </Button>
         </Link>
       </ContainerScale>
@@ -108,8 +109,8 @@ const HeroDemo2 = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button className="bg-white text-[#021526] px-4 py-2 font-medium   hover:bg-white/80 cursor-pointer">
-            View Project
+          <Button className="bg-white text-[#021526] px-4 py-2 font-medium   hover:bg-white/80 cursor-pointer flex gap-2 items-center">
+            View Project <SquareArrowOutUpRight size={16} />
           </Button>
         </Link>
       </ContainerScale>
@@ -150,8 +151,8 @@ const HeroDemo3 = () => {
           to contribute through donations.
         </p>
         <Link href="https://www.ekpomaassociation.org" target="_blank">
-          <Button className="bg-black px-4 py-2 font-medium   hover:bg-black/70 cursor-pointer">
-            View Project
+          <Button className="bg-black px-4 py-2 font-medium   hover:bg-black/70 cursor-pointer flex gap-2 items-center">
+            View Project <SquareArrowOutUpRight size={16} />
           </Button>
         </Link>
       </ContainerScale>
@@ -192,8 +193,8 @@ const HeroDemo4 = () => {
         </p>
 
         <Link href="https://www.hcimpactmag.com" target="_blank">
-          <Button className="bg-white text-[#021526] px-4 py-2 font-medium   hover:bg-white/80 cursor-pointer">
-            View Project
+          <Button className="bg-white text-[#021526] px-4 py-2 font-medium   hover:bg-white/80 cursor-pointer flex gap-2 items-center">
+            View Project <SquareArrowOutUpRight size={16} />
           </Button>
         </Link>
       </ContainerScale>
