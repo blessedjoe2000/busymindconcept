@@ -55,7 +55,7 @@ const HeroDemo1 = () => {
       </BentoGrid>
 
       <ContainerScale className="z-50 sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-white/60 backdrop-blur-md rounded-xl p-6">
-        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter text-slate-800 ">
+        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter text-[#27391C] ">
           Safe Picc Inc.
         </h1>
         <p className="my-6 max-w-2xl text-sm text-slate-700 md:text-base">
@@ -64,7 +64,7 @@ const HeroDemo1 = () => {
           in the healthcare field.
         </p>
         <Link href="https://www.safepicc.com" target="_blank">
-          <Button className="bg-black px-4 py-2 font-medium hover:bg-black/70 cursor-pointer flex gap-2 items-center">
+          <Button className="bg-[#27391C] px-4 py-2 font-medium cursor-pointer flex gap-2 items-center hover:text-[#FFCF50] ">
             View Project <SquareArrowOutUpRight size={16} />
           </Button>
         </Link>
@@ -75,7 +75,7 @@ const HeroDemo1 = () => {
 
 const HeroDemo2 = () => {
   return (
-    <ContainerScroll className="h-[350vh] bg-slate-900 text-slate-100">
+    <ContainerScroll className="h-[350vh] bg-[#27391C] text-slate-100">
       <BentoGrid
         variant={"sevenCells"}
         className="sticky left-0 top-0 h-svh w-full p-4"
@@ -96,8 +96,8 @@ const HeroDemo2 = () => {
             </BentoCell>
           ))}
       </BentoGrid>
-      <ContainerScale className="z-40 sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-[#021526]/60 backdrop-blur-md rounded-xl p-6">
-        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter ">
+      <ContainerScale className="z-40 sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-[#27391C]/60 backdrop-blur-md rounded-xl p-6">
+        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter text-[#FFCF50] ">
           Eagle Collection Store
         </h1>
         <p className="my-6 max-w-2xl text-sm opacity-80 md:text-base">
@@ -109,7 +109,7 @@ const HeroDemo2 = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button className="bg-white text-[#021526] px-4 py-2 font-medium   hover:bg-white/80 cursor-pointer flex gap-2 items-center">
+          <Button className="bg-[#FFCF50] text-[#000] px-4 py-2 font-medium hover:bg-[#FFCF50]/90 cursor-pointer flex gap-2 items-center">
             View Project <SquareArrowOutUpRight size={16} />
           </Button>
         </Link>
@@ -142,16 +142,16 @@ const HeroDemo3 = () => {
           ))}
       </BentoGrid>
       <ContainerScale className="z-30  sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-white/60 backdrop-blur-md rounded-xl p-6">
-        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter">
+        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter text-[#27391C]">
           Ekpoma Association Houston
         </h1>
-        <p className="my-6 max-w-2xl text-sm text-stone-500 md:text-base">
+        <p className="my-6 max-w-2xl text-sm text-slate-700 md:text-base">
           A non-profit organization dedicated to promoting community development
           initiatives and providing a platform for individuals and organizations
           to contribute through donations.
         </p>
         <Link href="https://www.ekpomaassociation.org" target="_blank">
-          <Button className="bg-black px-4 py-2 font-medium   hover:bg-black/70 cursor-pointer flex gap-2 items-center">
+          <Button className="bg-[#27391C] px-4 py-2 font-medium cursor-pointer flex gap-2 items-center hover:text-[#FFCF50] ">
             View Project <SquareArrowOutUpRight size={16} />
           </Button>
         </Link>
@@ -162,7 +162,7 @@ const HeroDemo3 = () => {
 
 const HeroDemo4 = () => {
   return (
-    <ContainerScroll className="h-[350vh] bg-slate-900 text-slate-100">
+    <ContainerScroll className="h-[350vh] bg-[#27391C] text-slate-100">
       <BentoGrid
         variant={"threeCells"}
         className="sticky left-0 top-0 h-svh w-full p-4"
@@ -183,8 +183,8 @@ const HeroDemo4 = () => {
             </BentoCell>
           ))}
       </BentoGrid>
-      <ContainerScale className="z-10  sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-[#021526]/60 backdrop-blur-md rounded-xl p-6">
-        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter ">
+      <ContainerScale className="z-10  sm:w-[600px] w-full px-10 text-center flex flex-col justify-center items-center bg-[#27391C]/60 backdrop-blur-md rounded-xl p-6">
+        <h1 className="max-w-xl sm:text-5xl text-3xl font-bold tracking-tighter text-[#FFCF50]">
           Healthcare Impact
         </h1>
         <p className="my-6 max-w-2xl text-sm opacity-80 md:text-base">
@@ -193,7 +193,7 @@ const HeroDemo4 = () => {
         </p>
 
         <Link href="https://www.hcimpactmag.com" target="_blank">
-          <Button className="bg-white text-[#021526] px-4 py-2 font-medium   hover:bg-white/80 cursor-pointer flex gap-2 items-center">
+          <Button className="bg-[#FFCF50] text-[#000] px-4 py-2 font-medium hover:bg-[#FFCF50]/90 cursor-pointer flex gap-2 items-center">
             View Project <SquareArrowOutUpRight size={16} />
           </Button>
         </Link>
